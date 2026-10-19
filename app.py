@@ -83,7 +83,6 @@ if st.button("Predict price", type="primary"):
     price = float(np.expm1(model.predict(row)[0]))
 
     st.metric("Estimated nightly price", f"£{price:,.0f}")
-    st.write(f"Typical error of this model is about **±£{APP_MAE_GBP}**.")
     st.write(f"Distance to central London: **{dist:.1f} km** (calculated from the neighbourhood).")
 
 st.divider()
